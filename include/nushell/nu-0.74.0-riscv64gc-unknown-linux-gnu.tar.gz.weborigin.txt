@@ -1,0 +1,1 @@
+https://github.com/nushell/nushell/releases/download/0.74.0/nu-0.74.0-riscv64gc-unknown-linux-gnu.tar.gz
