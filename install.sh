@@ -47,7 +47,7 @@ rm -r "$pkgnm"
 if [ "$flofarch" = "amd64" ]; then
 echo "Installing nushell..."
 pkgnm="nu-0.74.0-x86_64-unknown-linux-gnu"
-tar -xzf include/nushell/"$pkgnm".tar.gz
+tar -xzf include/nu/nushell/"$pkgnm".tar.gz
 $maysudo mv -f "$pkgnm"/nu /usr/bin/nu
 $maysudo chmod +x /usr/bin/nu
 rm -rf "$pkgnm"
@@ -59,6 +59,20 @@ chsh -s /usr/bin/nu
 # introduce in next build
 # task: enable plugins
 fi
+
+echo "Installing nu-post-install..."
+cd include/nu/nu-post-install
+if [ ! -e .git ]; then git clone --no-checkout https://github.com/Floflis/nu-post-install.git .; fi
+if [ -e .git ]; then git pull; fi
+git checkout -f
+chmod +x install.sh && $maysudo sh ./install.sh
+#rm -f install.sh #use noah to exclude everything except .git
+#rm -f nu-script-handler
+#rm -f Tasks.txt
+#rm -f .gitattributes
+#rm -f .gitmeta
+#rm -rf rsc
+cd "$SCRIPTPATH"
 
 echo "Installing Witchcraft Candy Colors..."
 $maysudo apt-get install dconf-cli
