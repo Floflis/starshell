@@ -119,3 +119,6 @@ echo 'source ~/.cache/starship/init.nu' >> /home/${flouser}/.config/nushell/conf
 #https://starship.rs/presets/pastel-powerline.html
 fi
 # <---- future task: check against .sha256 file; floflis icons: icon for .sha256 files and file handler for comparing
+
+cp include/starship.svg /usr/share/icons/hicolor/scalable/apps/
+$maysudo gtk-update-icon-cache /usr/share/icons/gnome/ -f
