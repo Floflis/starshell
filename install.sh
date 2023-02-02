@@ -109,11 +109,11 @@ echo 'eval "$(starship init bash)"' > /home/${flouser}/.bashrc # configure Stars
 #EOF
 ## this is continuously adding the same entries to mimeapps.list and have to be fixed
 
-cat > /home/${flouser}/.config/nushell/env.nu <<EOF
+cat >> /home/${flouser}/.config/nushell/env.nu <<EOF
 mkdir ~/.cache/starship
 starship init nu | save -f ~/.cache/starship/init.nu
 EOF
-echo 'source ~/.cache/starship/init.nu' > /home/${flouser}/.config/nushell/config.nu
+echo 'source ~/.cache/starship/init.nu' >> /home/${flouser}/.config/nushell/config.nu
 #-
 #https://starship.rs/config/#prompt
 #https://starship.rs/presets/pastel-powerline.html
