@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+rocketlaunch_dir=`pwd` #from https://unix.stackexchange.com/a/52919/470623
 flouser=$(logname)
 
 unameOutM="$(uname -m)"
@@ -14,7 +14,7 @@ case "${unameOutM}" in
 esac
 
 is_root=false
-if [ "$([[ $UID -eq 0 ]] || echo "Not root")" = "Not root" ]
+if [ "$([ $UID -eq 0 ] || echo "Not root")" = "Not root" ]
    then
       is_root=false
    else
@@ -72,7 +72,7 @@ chmod +x install.sh && $maysudo sh ./install.sh
 #rm -f .gitattributes
 #rm -f .gitmeta
 #rm -rf rsc
-cd "$SCRIPTPATH"
+cd "$rocketlaunch_dir"
 
 echo "Installing Witchcraft Candy Colors..."
 $maysudo apt-get install dconf-cli
@@ -88,7 +88,7 @@ chmod +x install.sh && ./install.sh
 #rm -f LICENSE
 #rm -f readme.md
 #rm -f screenshot.png
-cd "$SCRIPTPATH"
+cd "$rocketlaunch_dir"
 
 echo "Installing Starship..."
 if [ "$flofarch" = "amd64" ]; then
