@@ -46,7 +46,7 @@ rm -r "$pkgnm"
 
 if [ "$flofarch" = "amd64" ]; then
 echo "Installing nushell..."
-pkgnm="nu-0.74.0-x86_64-unknown-linux-gnu"
+pkgnm="nu-0.76.0-x86_64-unknown-linux-gnu"
 tar -xzf include/nu/nushell/"$pkgnm".tar.gz
 $maysudo mv -f "$pkgnm"/nu /usr/bin/nu
 $maysudo chmod +x /usr/bin/nu
