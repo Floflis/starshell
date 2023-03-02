@@ -37,7 +37,7 @@ cd "$pkgnm"
 unzip ../include/nerdyfonts/"$pkgnm".zip
 #$maysudo mv *.ttf *.TTF /usr/share/fonts/truetype/
 $maysudo mv *.ttf /usr/share/fonts/truetype/
-cd ../..
+cd ..
 rm -r "$pkgnm"
 pkgnm="FiraCode"
 echo "Installing $pkgnm font..."
@@ -45,7 +45,7 @@ mkdir "$pkgnm"
 cd "$pkgnm"
 unzip ../include/nerdyfonts/"$pkgnm".zip
 $maysudo mv *.ttf /usr/share/fonts/truetype/
-cd ../..
+cd ..
 rm -r "$pkgnm"
 #sudo mv *.otf *.OTF /usr/share/fonts/opentype
 #- Font Refresh Tip
