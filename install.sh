@@ -28,12 +28,19 @@ if [ "$is_root" = "false" ]
       maysudo=""
 fi
 
+echo "Installing fonts:"
 echo "Installing FantasqueSansMono font (ComicSans haters gonna hate but its cute <3)..."
 pkgnm="FantasqueSansMono"
 mkdir "$pkgnm"
 cd "$pkgnm"
 unzip ../include/nerdyfonts/"$pkgnm".zip
 #$maysudo mv *.ttf *.TTF /usr/share/fonts/truetype/
+$maysudo mv *.ttf /usr/share/fonts/truetype/
+echo "Installing FiraCode font..."
+pkgnm="FiraCode"
+mkdir "$pkgnm"
+cd "$pkgnm"
+unzip ../include/nerdyfonts/"$pkgnm".zip
 $maysudo mv *.ttf /usr/share/fonts/truetype/
 #sudo mv *.otf *.OTF /usr/share/fonts/opentype
 #- Font Refresh Tip
