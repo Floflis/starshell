@@ -29,11 +29,10 @@ if [ "$is_root" = "false" ]
 fi
 
 echo "Installing FantasqueSansMono font (ComicSans haters gonna hate but its cute <3)..."
-pkgnm="FantasqueSansMono-Normal"
+pkgnm="FantasqueSansMono"
 mkdir "$pkgnm"
 cd "$pkgnm"
 unzip ../include/nerdyfonts/"$pkgnm".zip
-cd TTF
 #$maysudo mv *.ttf *.TTF /usr/share/fonts/truetype/
 $maysudo mv *.ttf /usr/share/fonts/truetype/
 #sudo mv *.otf *.OTF /usr/share/fonts/opentype
