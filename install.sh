@@ -36,19 +36,21 @@ cd "$pkgnm"
 unzip ../include/nerdyfonts/"$pkgnm".zip
 #$maysudo mv *.ttf *.TTF /usr/share/fonts/truetype/
 $maysudo mv *.ttf /usr/share/fonts/truetype/
+cd ../..
+rm -r "$pkgnm"
 echo "Installing FiraCode font..."
 pkgnm="FiraCode"
 mkdir "$pkgnm"
 cd "$pkgnm"
 unzip ../include/nerdyfonts/"$pkgnm".zip
 $maysudo mv *.ttf /usr/share/fonts/truetype/
+cd ../..
+rm -r "$pkgnm"
 #sudo mv *.otf *.OTF /usr/share/fonts/opentype
 #- Font Refresh Tip
 #- After you install new fonts on Ubuntu you’re not able to use them in apps until you reboot. To avoid that, run sudo fc-cache -f -v to refresh the font cache, then logout and back in. After doing this any fonts you installed manually will be selectable in apps/extensions such as this one.
 fc-cache -f -v
 #- from https://www.omgubuntu.co.uk/2022/12/desktop-clock-gnome-extension
-cd ../..
-rm -r "$pkgnm"
 
 if [ "$flofarch" = "amd64" ]; then
 echo "Installing nushell..."
