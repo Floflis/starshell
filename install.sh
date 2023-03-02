@@ -29,8 +29,9 @@ if [ "$is_root" = "false" ]
 fi
 
 echo "Installing fonts:"
-echo "Installing FantasqueSansMono font (ComicSans haters gonna hate but its cute <3)..."
+#-
 pkgnm="FantasqueSansMono"
+echo "Installing $pkgnm font (ComicSans haters gonna hate but its cute <3)..."
 mkdir "$pkgnm"
 cd "$pkgnm"
 unzip ../include/nerdyfonts/"$pkgnm".zip
@@ -38,8 +39,8 @@ unzip ../include/nerdyfonts/"$pkgnm".zip
 $maysudo mv *.ttf /usr/share/fonts/truetype/
 cd ../..
 rm -r "$pkgnm"
-echo "Installing FiraCode font..."
 pkgnm="FiraCode"
+echo "Installing $pkgnm font..."
 mkdir "$pkgnm"
 cd "$pkgnm"
 unzip ../include/nerdyfonts/"$pkgnm".zip
